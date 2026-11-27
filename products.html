@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Produk - TechShop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="section">
+    <h1>Semua produk</h1>
+
+    <div class="toolbar">
+      <input id="search-input" class="field" type="search" placeholder="Cari produk, contoh: Ryzen">
+      <select id="sort-select" class="field">
+        <option value="default">Urutkan: bawaan</option>
+        <option value="low">Harga termurah</option>
+        <option value="high">Harga termahal</option>
+      </select>
+    </div>
+
+    <div id="filters" class="filters"></div>
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
