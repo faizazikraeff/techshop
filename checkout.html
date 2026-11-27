@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Checkout - TechShop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="section">
+    <h1>Checkout</h1>
+
+    <p id="empty-message" hidden>Keranjang kamu kosong. <a href="products.html">Lihat produk</a></p>
+
+    <div id="checkout-layout" class="checkout-layout">
+      <form id="checkout-form" class="form-box">
+        <h2>Data pengiriman</h2>
+
+        <label for="name">Nama lengkap</label>
+        <input id="name" class="field" type="text" required>
+
+        <label for="phone">Nomor HP</label>
+        <input id="phone" class="field" type="tel" pattern="[0-9+ ]{9,15}" title="Isi nomor HP, contoh: 081234567890" required>
+
+        <label for="address">Alamat lengkap</label>
+        <textarea id="address" class="field" rows="3" required></textarea>
+
+        <label for="payment">Metode pembayaran</label>
+        <select id="payment" class="field" required>
+          <option value="Transfer bank">Transfer bank</option>
+          <option value="E-wallet">E-wallet</option>
+          <option value="COD">Bayar di tempat (COD)</option>
+        </select>
+
+        <button type="submit" class="btn">Buat pesanan</button>
+      </form>
+
+      <aside class="form-box">
+        <h2>Ringkasan pesanan</h2>
+        <div id="summary-items"></div>
+        <div class="summary-row"><span>Subtotal</span><span id="sum-subtotal"></span></div>
+        <div class="summary-row"><span>Ongkir</span><span id="sum-shipping"></span></div>
+        <div class="summary-row summary-total"><span>Total</span><span id="sum-total"></span></div>
+      </aside>
+    </div>
+
+    <div id="order-success" class="form-box success-box" hidden>
+      <h2>Pesanan berhasil dibuat</h2>
+      <p>Nomor pesanan kamu: <strong id="order-id"></strong></p>
+      <p>Total bayar: <strong id="order-total"></strong></p>
+      <p>Terima kasih sudah belanja di TechShop.</p>
+      <a class="btn" href="products.html">Belanja lagi</a>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Kontak - TechShop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="section">
+    <h1>Hubungi kami</h1>
+    <p>Bingung pilih komponen atau mau tanya stok? Kirim pesan, kami bantu.</p>
+
+    <div class="checkout-layout">
+      <form id="contact-form" class="form-box">
+        <label for="c-name">Nama</label>
+        <input id="c-name" class="field" type="text" required>
+
+        <label for="c-email">Email</label>
+        <input id="c-email" class="field" type="email" required>
+
+        <label for="c-message">Pesan</label>
+        <textarea id="c-message" class="field" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Kirim pesan</button>
+        <p id="contact-success" class="success-text" hidden>Pesan terkirim. Kami balas secepatnya.</p>
+      </form>
+
+      <aside class="form-box">
+        <h2>Info toko</h2>
+        <p><strong>Email</strong><br>hello@techshop.id</p>
+        <p><strong>WhatsApp</strong><br>0812-3456-7890</p>
+        <p><strong>Alamat</strong><br>Jl. SMK Amaliah No.7</p>
+        <p><strong>Jam buka</strong><br>Senin - Sabtu, 09.00 - 17.00</p>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
